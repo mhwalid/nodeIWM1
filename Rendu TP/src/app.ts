@@ -1,7 +1,9 @@
 import express from 'express'
 import dotenv from 'dotenv'
-import {router} from "./routes/human.routes"
-import {db} from "../../nodeIWM1/Rendu TP/config/db.config"
+import {db} from "../config/db.config"
+
+const authRouter = require('./routes/auth.routes')
+const humanRouter = require('./routes/human.routes')
 
 const app = express()
 
@@ -12,7 +14,8 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 //routes
-app.use('/api/human', router)
+app.use("/api/auth", authRouter )
+app.use('/api/human', humanRouter)
 
 //db connection then server connection
 db.then(() => {
