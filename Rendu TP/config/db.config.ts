@@ -11,7 +11,7 @@ const dbName = process.env.DB_NAME
 
 //connection string to mongo atlas
 
-const connectionString = `mongodb+srv://${username}:${password}@cluster0.pr5zkxc.mongodb.net/${dbName}?retryWrites=true&w=majority`
+const connectionString = `mongodb+srv://${username}:${password}@mongodb-iw-m1.k2fxrp6.mongodb.net/${dbName}?retryWrites=true&w=majority`
 console.log(connectionString)
 
 const options = {
