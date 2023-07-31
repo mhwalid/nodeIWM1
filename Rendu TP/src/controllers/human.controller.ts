@@ -13,7 +13,8 @@ class humanController {
                 age: req.body.age,
                 city: req.body.city,
                 birthDate: req.body.birthDate,
-                isWorking: req.body.isWorking
+                isWorking: req.body.isWorking,
+                animals: req.body.animals
             }
             //validating the request
             const {error, value} = HumansSchemaValidate.validate(data)

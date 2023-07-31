@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="eb3c7a87-712a-43ef-90fa-56e2dbe809c5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Rendu TP/src/controllers/animal.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rendu TP/src/models/animal.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rendu TP/src/routes/animal.routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rendu TP/src/services/animal.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rendu TP/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Rendu TP/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rendu TP/src/controllers/human.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Rendu TP/src/controllers/human.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rendu TP/src/middleware/authCheck.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Rendu TP/src/middleware/authCheck.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rendu TP/src/models/human.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Rendu TP/src/models/human.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rendu TP/src/services/human.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Rendu TP/src/services/human.service.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.1" />
+  <component name="ProjectId" id="2TKewE7mbzOOvVRRDvrpSDcRw5D" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "javascript.nodejs.core.library.configured.version": "18.16.0",
+    "javascript.nodejs.core.library.typings.version": "18.16.0",
+    "last_opened_file_path": "C:/Users/basil/Documents/ESGI - M1/Node/nodeIWM1/Rendu TP/src/routes",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\basil\\Documents\\ESGI - M1\\Node\\nodeIWM1\\Rendu TP\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\basil\Documents\ESGI - M1\Node\nodeIWM1\Rendu TP\src\routes" />
+      <recent name="C:\Users\basil\Documents\ESGI - M1\Node\nodeIWM1\Rendu TP\src\services" />
+      <recent name="C:\Users\basil\Documents\ESGI - M1\Node\nodeIWM1\Rendu TP\src\models" />
+      <recent name="C:\Users\basil\Documents\ESGI - M1\Node\nodeIWM1\Rendu TP\src\controllers" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eb3c7a87-712a-43ef-90fa-56e2dbe809c5" name="Changes" comment="" />
+      <created>1690796437170</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690796437170</updated>
+      <workItem from="1690796438595" duration="2847000" />
+      <workItem from="1690799321089" duration="5971000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

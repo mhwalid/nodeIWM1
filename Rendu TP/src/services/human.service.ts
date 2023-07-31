@@ -1,5 +1,6 @@
 // Import module
 import { Human } from '../models/human'
+import {animalService} from "./animal.service";
 
 export class humanService {
     // Create a human
@@ -14,7 +15,7 @@ export class humanService {
     // Get all Humans
     async getHumans() {
         try {
-            return await Human.find({})
+            return await Human.find({}).populate("animal")
         } catch (error) {
             console.log(error)
         }

@@ -1,5 +1,6 @@
 //importing modules
-import  {Schema, model,} from 'mongoose'
+import mongoose, {Schema, model,} from 'mongoose'
+import { IAnimals } from "./animal";
 import Joi from 'joi'
 
 //validation schema
@@ -9,6 +10,7 @@ export const HumansSchemaValidate = Joi.object({
     city: Joi.string(),
     birthDate: Joi.date(),
     isWorking: Joi.boolean().required(),
+    animals: Joi.array()
 })
 
 //creating an interface
@@ -18,18 +20,19 @@ interface IHumans {
     city: string,
     birthDate: Date,
     isWorking: boolean,
+    animals: IAnimals[]
 }
 
 //Human schema
 const humanSchema = new Schema<IHumans>({
     name: {
         type: String,
-        required: true,
+        required: [true, "Name is required"],
         maxlength: 5
     },
     age: {
         type: Number,
-        required: true
+        required: [true, "Age is required"],
     },
     city: {
         type: String,
@@ -39,9 +42,13 @@ const humanSchema = new Schema<IHumans>({
     },
     isWorking: {
         type: Boolean,
-        required: true,
+        required: [true, "Is Working is required"],
         default: false
     },
+    animals: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "animal",
+    }]
 })
 
 //creating a models
