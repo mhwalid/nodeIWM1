@@ -26,7 +26,7 @@ export class humanService {
         try {
             const human = await Human.findById({_id:id})
             if (!human) {
-                return 'human not available'
+                return null
             }
             return human
 
@@ -43,7 +43,7 @@ export class humanService {
             //new:true, so the dats being returned, is the update one
             const human = await Human.findByIdAndUpdate({_id:id}, data, {new: true})
             if(!human){
-                return "human not available"
+                return null
             }
             return human
         } catch (error) {
@@ -56,7 +56,7 @@ export class humanService {
         try {
             const human = await Human.findByIdAndDelete(id)
             if (!human) {
-                return 'human not available'
+                return null
             }
         } catch (error) {
             console.log(error)

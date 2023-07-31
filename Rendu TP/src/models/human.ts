@@ -7,6 +7,7 @@ export const HumansSchemaValidate = Joi.object({
     name: Joi.string().required().max(5),
     age: Joi.number().required(),
     city: Joi.string(),
+    birthDate: Joi.date(),
     isWorking: Joi.boolean().required(),
 })
 
@@ -15,8 +16,8 @@ interface IHumans {
     name: string,
     age: number,
     city: string,
+    birthDate: Date,
     isWorking: boolean,
-
 }
 
 //Human schema
@@ -32,6 +33,9 @@ const humanSchema = new Schema<IHumans>({
     },
     city: {
         type: String,
+    },
+    birthDate: {
+        type: Date,
     },
     isWorking: {
         type: Boolean,
