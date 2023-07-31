@@ -59,3 +59,11 @@ db.then(() => {
     app.listen(process.env.PORT, () => console.log('Server is listening on port 3000'))
 })
 
+
+
+Cette façon de faire permet de s'assurer que notre connexion à notre BDD est valide avant de lancer l'application. Cela permet aussi de factoriser le fonctionnement de notre application.
+
+
+
+
+
