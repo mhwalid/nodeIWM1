@@ -1,15 +1,18 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import {db} from "../config/db.config"
+import cookieParser from 'cookie-parser';
 
 const authRouter = require('./routes/auth.routes')
 const humanRouter = require('./routes/human.routes')
+
 
 const app = express()
 
 dotenv.config();
 
 //middlewares
+app.use(cookieParser())
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 

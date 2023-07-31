@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb3c7a87-712a-43ef-90fa-56e2dbe809c5" name="Changes" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/Rendu TP/src/controllers/animal.controller.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Rendu TP/src/models/animal.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Rendu TP/src/routes/animal.routes.ts" afterDir="false" />
@@ -14,6 +15,9 @@
       <change beforePath="$PROJECT_DIR$/Rendu TP/src/middleware/authCheck.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Rendu TP/src/middleware/authCheck.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rendu TP/src/models/human.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Rendu TP/src/models/human.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rendu TP/src/services/human.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Rendu TP/src/services/human.service.ts" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Rendu TP/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Rendu TP/src/app.ts" afterDir="false" />
+>>>>>>> authentification
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +73,11 @@
       <option name="presentableId" value="Default" />
       <updated>1690796437170</updated>
       <workItem from="1690796438595" duration="2847000" />
+<<<<<<< HEAD
       <workItem from="1690799321089" duration="5971000" />
+=======
+      <workItem from="1690799321089" duration="6327000" />
+>>>>>>> authentification
     </task>
     <servers />
   </component>
