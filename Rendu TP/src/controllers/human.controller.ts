@@ -17,14 +17,14 @@ class humanController {
                 salary: req.body.salary,
                 animals: req.body.animals
             }
-            // Validation de la requete
+            // Validation de la request
             const {error, value} = HumansSchemaValidate.validate(data)
 
             if (error) {
                 return res.status(400).send(error.message);
             } else {
                 if (data.animals) {
-                    // On vérifie que tout les animaux renseignés existe
+                    // On vérifie que tous les animaux renseignés existent
                     for (const animalId of data.animals) {
                         const animal = await animalServices.getAnimal(animalId);
                         if (!animal) {
@@ -128,8 +128,8 @@ class humanController {
     /**
      * Récupère les humains qui ont des salaires inférieurs à 1000
      * ET qui ont plus de 40 ans
-     * ET qui habite à Paris
-     * ET un animal qui fais exactement 2 fois moins l'age de l'humain
+     * ET qui habitent à Paris
+     * ET un animal qui fait exactement 2 fois moins l'âge de l'humain
      */
     async getHumansSpecificCriteria(req: Request, res: Response) {
         try {
@@ -137,8 +137,8 @@ class humanController {
             logger.info('Controller -> getHumansSpecificCriteria : Humans fetch');
             return res.status(200).send(humans)
         } catch (error) {
-            logger.error('Controller -> getHumansSpecificCriteria : Erreur lors de la récupération des humains correspondant aux critères spécifiés');
-            return res.status(500).json({error: 'Erreur lors de la récupération des humains correspondant aux critères spécifiés.'});
+            logger.error('Controller -> getHumansSpecificCriteria : Erreur lors de la récupération des humains correspondants aux critères spécifiés');
+            return res.status(500).json({error: 'Erreur lors de la récupération des humains correspondants aux critères spécifiés.'});
         }
     }
 }

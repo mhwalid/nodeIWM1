@@ -4,3 +4,9 @@
   label: 'Civilisation API',
   timestamp: '2023-Aug-01 19:36:15'
 }
+{
+  message: 'Server is listening on port 3000',
+  level: 'info',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 21:01:09'
+}

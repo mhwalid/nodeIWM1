@@ -1,6 +1,7 @@
 //importing modules
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
+import {logger} from "./logger";
 
 dotenv.config()
 
@@ -8,10 +9,11 @@ dotenv.config()
 const username = process.env.LOGIN
 const password = process.env.PASSWORD
 const dbName = process.env.DB_NAME
+const dbUrl = process.env.DB_URL
 
 //connection string to mongo atlas
 
-const connectionString = `mongodb+srv://${username}:${password}@mongodb-iw-m1.k2fxrp6.mongodb.net/${dbName}?retryWrites=true&w=majority`
+const connectionString = `mongodb+srv://${username}:${password}@${dbUrl}/${dbName}?retryWrites=true&w=majority`
 console.log(connectionString)
 
 const options = {
@@ -26,8 +28,10 @@ export const db = mongoose.connect(connectionString, options)
     .then(res => {
         if(res){
             console.log(`Database connection successfully to ${dbName}`)
+            logger.info(`Database connection successfully to ${dbName}`)
         }
 
     }).catch(err => {
         console.log('`Database connection error', err)
+        logger.error('`Database connection error', err)
     })
