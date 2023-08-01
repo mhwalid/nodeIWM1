@@ -5,30 +5,32 @@ import Joi from 'joi'
 
 //validation schema
 export const HumansSchemaValidate = Joi.object({
-    name: Joi.string().required().max(5),
+    name: Joi.string().required().max(20),
     age: Joi.number().required(),
     city: Joi.string(),
     birthDate: Joi.date(),
     isWorking: Joi.boolean().required(),
+    salary: Joi.number().required(),
     animals: Joi.array()
 })
 
 //creating an interface
-interface IHumans {
+export interface IHumans {
     name: string,
     age: number,
     city: string,
     birthDate: Date,
     isWorking: boolean,
+    salary: number,
     animals: IAnimals[]
 }
 
 //Human schema
-const humanSchema = new Schema<IHumans>({
+const HumanSchema = new Schema<IHumans>({
     name: {
         type: String,
         required: [true, "Name is required"],
-        maxlength: 5
+        maxlength: 20
     },
     age: {
         type: Number,
@@ -45,11 +47,15 @@ const humanSchema = new Schema<IHumans>({
         required: [true, "Is Working is required"],
         default: false
     },
+    salary: {
+        type: Number,
+        required: [true, "Age is required"],
+    },
     animals: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "animal",
     }]
-})
+});
 
 //creating a models
-export const Human = model<IHumans>('Human', humanSchema )
+export const Human = mongoose.model("human", HumanSchema);

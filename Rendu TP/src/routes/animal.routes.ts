@@ -12,6 +12,9 @@ animalRouter.post('/', checkAuth, AnimalController.addAnimal)
 //get animals
 animalRouter.get('/', checkAuth,  AnimalController.getAnimals)
 
+// Libérer tout les animaux de leurs maitres
+animalRouter.get('/release', checkAuth,  AnimalController.updateAllAnimalsIsDomesticToFalseAndDeleteAssociationWithHuman)
+
 //get single animal
 animalRouter.get('/:id', checkAuth, AnimalController.getOneAnimal)
 

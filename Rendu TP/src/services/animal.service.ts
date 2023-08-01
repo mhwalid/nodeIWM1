@@ -1,5 +1,6 @@
 // Import module
 import { Animal } from '../models/animal'
+import {Human} from "../models/human";
 
 export class animalService {
     // Create a animal
@@ -54,12 +55,23 @@ export class animalService {
     //delete a animal by using the find by id and delete
     async deleteAnimal(id: string) {
         try {
-            const animal = await Animal.findByIdAndDelete(id)
+            const animal = await Animal.findById(id)
             if (!animal) {
                 return null
             }
+
+            const animalToDelete = await Animal.findByIdAndDelete({_id:id});
+            return animal;
         } catch (error) {
             console.log(error)
+        }
+    }
+
+    async setAllAnimalsIsDomesticToFalse(): Promise<void> {
+        try {
+            await Animal.updateMany({}, { isDomestic: false }).exec();
+        } catch (error) {
+            throw new Error('Erreur lors de la mise à jour des animaux.');
         }
     }
 }

@@ -2,6 +2,7 @@
 import {humanServices} from '../services/human.service'
 import { Request, Response } from 'express'
 import { HumansSchemaValidate } from '../models/human'
+import {animalServices} from "../services/animal.service";
 
 class humanController {
     // Add human controller
@@ -14,6 +15,7 @@ class humanController {
                 city: req.body.city,
                 birthDate: req.body.birthDate,
                 isWorking: req.body.isWorking,
+                salary: req.body.salary,
                 animals: req.body.animals
             }
             //validating the request
@@ -21,10 +23,23 @@ class humanController {
 
             if(error){
                 return res.status(400).send(error.message);
-            }else{
+            } else {
+                if (data.animals) {
+                    // On vérifie que tout les animaux renseignés existe
+                    for (const animalId of data.animals) {
+                        const animal = await animalServices.getAnimal(animalId);
+                        if (!animal) {
+                            return res.status(404).send("L'animal avec l'id : " + animalId + " n'a pas été trouvé. Impossible d'ajouter l'humain.");
+                        } else {
+                            // On rend l'animal domestic
+                            await animalServices.updateAnimal(animalId, {"isDomestic": true})
+                        }
+                    }
+                }
+
                 //call the create human function in the service and pass the data from the request
                 const human = await humanServices.createHuman(value)
-                res.status(201).send(human)
+                return res.status(201).send(human)
             }
         }
         catch (error) {
@@ -37,7 +52,7 @@ class humanController {
     getHumans = async (req: Request, res: Response) => {
         try {
             const humans = await humanServices.getHumans()
-            res.send(humans)
+            return res.status(200).send(humans)
         } catch (error) {
             console.error('Error while fetching humans:', error);
             return res.status(500).send('Internal Server Error');
@@ -54,7 +69,7 @@ class humanController {
             if (!human) {
                 return res.status(404).send('Human not found');
             }
-            res.send(human)
+            return res.status(200).send(human)
         } catch (error) {
             console.error('Error while fetching a single human:', error);
             return res.status(500).send('Internal Server Error');
@@ -69,7 +84,7 @@ class humanController {
             if (!human) {
                 return res.status(404).send('Human not found');
             }
-            res.send(human)
+            return res.status(200).send(human)
         } catch (error) {
             console.error('Error while updating human:', error);
             return res.status(500).send('Internal Server Error');
@@ -85,10 +100,36 @@ class humanController {
             if (!human) {
                 return res.status(404).send('Human not found');
             }
-            return res.send('Human deleted');
+            return res.status(200).send('Human deleted');
         } catch (error) {
-            console.error('Error while deleting human:', error);
             return res.status(500).send('Internal Server Error');
+        }
+    }
+
+    getHumansWithHighSalaryAndYoungAge = async (req: Request, res: Response) => {
+        try {
+            const humans = await humanServices.getHumansWithHighSalaryAndYoungAge();
+            if (!humans) {
+                return res.status(404).send("Humans not found");
+            }
+            return res.status(200).send(humans);
+        } catch (error) {
+            return res.status(500).send('Internal Server Error');
+        }
+    }
+
+    /**
+     * Récupère les humains qui ont des salaires inférieurs à 1000
+     * ET Qui ont plus de 40 ans
+     * ET Qui habite à Paris
+     * ET un animal qui fais exactement 2 fois moins l'age de l'humain
+     */
+    async getHumansSpecificCriteria(req: Request, res: Response){
+        try {
+            const humans = await humanServices.getHumansMatchingCriteria();
+            return res.status(200).send(humans)
+        } catch (error) {
+            return res.status(500).json({ error: 'Erreur lors de la récupération des humains correspondant aux critères spécifiés.' });
         }
     }
 }

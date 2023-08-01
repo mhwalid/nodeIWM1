@@ -2,6 +2,7 @@
 import {animalServices} from '../services/animal.service'
 import { Request, Response } from 'express'
 import { AnimalsSchemaValidate } from '../models/animal'
+import {humanServices} from "../services/human.service";
 
 class animalController {
     // Add animal controller
@@ -21,7 +22,7 @@ class animalController {
             }else{
                 //call the create animal function in the service and pass the data from the request
                 const animal = await animalServices.createAnimal(value)
-                res.status(201).send(animal)
+                return res.status(201).send(animal)
             }
         }
         catch (error) {
@@ -34,7 +35,7 @@ class animalController {
     getAnimals = async (req: Request, res: Response) => {
         try {
             const animals = await animalServices.getAnimals()
-            res.send(animals)
+            return res.status(200).send(animals)
         } catch (error) {
             console.error('Error while fetching animals:', error);
             return res.status(500).send('Internal Server Error');
@@ -51,7 +52,7 @@ class animalController {
             if (!animal) {
                 return res.status(404).send('Animal not found');
             }
-            res.send(animal)
+            return res.status(200).json(animal)
         } catch (error) {
             console.error('Error while fetching a single animal:', error);
             return res.status(500).send('Internal Server Error');
@@ -66,7 +67,7 @@ class animalController {
             if (!animal) {
                 return res.status(404).send('Animal not found');
             }
-            res.send(animal)
+            return res.status(200).json(animal)
         } catch (error) {
             console.error('Error while updating animal:', error);
             return res.status(500).send('Internal Server Error');
@@ -82,10 +83,20 @@ class animalController {
             if (!animal) {
                 return res.status(404).send('Animal not found');
             }
-            return res.send('Animal deleted');
+            return res.status(200).send('Animal deleted');
         } catch (error) {
             console.error('Error while deleting animal:', error);
             return res.status(500).send('Internal Server Error');
+        }
+    }
+
+    async updateAllAnimalsIsDomesticToFalseAndDeleteAssociationWithHuman(req: Request, res: Response) {
+        try {
+            await humanServices.removeAllAnimalsFromAllHumans();
+            await animalServices.setAllAnimalsIsDomesticToFalse();
+            return res.status(200).send('Mise à jour réussie : Les animaux sont libérés');
+        } catch (error) {
+            return res.status(500).send('Erreur lors de la mise à jour des animaux.');
         }
     }
 }

@@ -12,6 +12,12 @@ humanRouter.post('/', checkAuth, HumanController.addHuman)
 //get humans
 humanRouter.get('/', checkAuth,  HumanController.getHumans)
 
+//High a human
+humanRouter.get('/high', checkAuth, HumanController.getHumansWithHighSalaryAndYoungAge)
+
+//High a human
+humanRouter.get('/specific', checkAuth, HumanController.getHumansSpecificCriteria)
+
 //get single human
 humanRouter.get('/:id', checkAuth, HumanController.getOneHuman)
 

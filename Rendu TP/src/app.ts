@@ -5,6 +5,7 @@ import cookieParser from 'cookie-parser';
 
 const authRouter = require('./routes/auth.routes')
 const humanRouter = require('./routes/human.routes')
+const animalRouter = require('./routes/animal.routes')
 
 
 const app = express()
@@ -19,7 +20,7 @@ app.use(express.urlencoded({extended: true}))
 //routes
 app.use("/api/auth", authRouter )
 app.use('/api/human', humanRouter)
-app.use('/api/animal', humanRouter)
+app.use('/api/animal', animalRouter)
 
 //db connection then server connection
 db.then(() => {
