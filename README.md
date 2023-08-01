@@ -94,7 +94,7 @@ Lancer le projet :
 npm run dev
 ```
 
-Tester les requêtes via la collection Postman créée :
+Tester les requêtes via la collection Postman créée : https://github.com/mhwalid/nodeIWM1/blob/main/Postman/Node%20JS%20Civilisation.postman_collection.json
 
 ## 5 grands principes REST :
 
