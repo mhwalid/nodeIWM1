@@ -1,21 +1,30 @@
 //importing modules
 import express from "express";
 import { HumanController } from '../controllers/human.controller'
+import {checkAuth} from "../middleware/authCheck";
 
 //initiating the router
-export const router = express.Router()
+const humanRouter = express.Router()
 
 //add human route
-router.post('/',HumanController.addHuman)
+humanRouter.post('/', checkAuth, HumanController.addHuman)
 
 //get humans
-router.get('/', HumanController.getHumans)
+humanRouter.get('/', checkAuth,  HumanController.getHumans)
+
+//High a human
+humanRouter.get('/high', checkAuth, HumanController.getHumansWithHighSalaryAndYoungAge)
+
+//High a human
+humanRouter.get('/specific', checkAuth, HumanController.getHumansSpecificCriteria)
 
 //get single human
-router.get('/:id', HumanController.getOneHuman)
+humanRouter.get('/:id', checkAuth, HumanController.getOneHuman)
 
 //update a human
-router.put('/:id', HumanController.updateHuman)
+humanRouter.put('/:id', checkAuth, HumanController.updateHuman)
 
 //delete a human
-router.delete('/:id', HumanController.deleteHuman)
+humanRouter.delete('/:id', checkAuth, HumanController.deleteHuman)
+
+module.exports = humanRouter;
