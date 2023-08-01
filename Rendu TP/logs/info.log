@@ -1,367 +1,78 @@
 {
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 19:36:15'
-}
-{
-<<<<<<< HEAD
-  message: "Service -> createAnimal : Erreur lors de la création d'un animal :MongooseError: Operation `animals.insertOne()` buffering timed out after 10000ms",
-  level: 'error',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:24:17'
-}
-{
-  message: "Controller -> addAnimal : Error while adding animal: Error: Erreur lors de la création d'un animal :MongooseError: Operation `animals.insertOne()` buffering timed out after 10000ms",
-  level: 'error',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:24:17'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:27:33'
-}
-{
-  message: "Service -> createAnimal : Erreur lors de la création d'un animal :MongooseError: Operation `animals.insertOne()` buffering timed out after 10000ms",
-  level: 'error',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:28:09'
-}
-{
-  message: "Controller -> addAnimal : Error while adding animal: Error: Erreur lors de la création d'un animal :MongooseError: Operation `animals.insertOne()` buffering timed out after 10000ms",
-  level: 'error',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:28:09'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:30:42'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:31:04'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:33:05'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:33:27'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:33:50'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:34:23'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:37:15'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:38:00'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:43:11'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:46:43'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:48:05'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:49:23'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:49:40'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:50:05'
-}
-{
-  message: "Service -> createAnimal : Erreur lors de la création d'un animal :MongooseError: Operation `animals.insertOne()` buffering timed out after 10000ms",
-  level: 'error',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:50:26'
-}
-{
-  message: "Controller -> addAnimal : Error while adding animal: Error: Erreur lors de la création d'un animal :MongooseError: Operation `animals.insertOne()` buffering timed out after 10000ms",
-  level: 'error',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:50:26'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:53:37'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:56:01'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:58:23'
-}
-{
-  message: 'Service -> getAnimals : Erreur lors de la récupération des animaux :MongooseError: Operation `animals.find()` buffering timed out after 10000ms',
-  level: 'error',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:58:41'
-}
-{
-  message: 'Controller -> getAnimals : Error while fetching animals : Error: Erreur lors de la récupération des animaux :MongooseError: Operation `animals.find()` buffering timed out after 10000ms',
-  level: 'error',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:58:41'
-}
-{
-  message: 'Service -> getAnimals : Erreur lors de la récupération des animaux :MongooseError: Operation `animals.find()` buffering timed out after 10000ms',
-  level: 'error',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:58:43'
-}
-{
-  message: 'Controller -> getAnimals : Error while fetching animals : Error: Erreur lors de la récupération des animaux :MongooseError: Operation `animals.find()` buffering timed out after 10000ms',
-  level: 'error',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 21:58:43'
-}
-{
-  message: 'Controller -> login : Login : basile.regnaut@gmail success',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 22:09:48'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 22:32:56'
-}
-{
-  message: `Service -> getAnimal : Erreur lors de la récupération de l'animale : sample-animal-id CastError: Cast to ObjectId failed for value "{ _id: 'sample-animal-id' }" (type Object) at path "_id" for model "animal"`,
-  level: 'error',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 22:33:05'
-}
-{
-  message: `Controller -> getOneAnimal : Error while fetching a single animal : Error: Erreur lors de la récupération de l'animale : sample-animal-id CastError: Cast to ObjectId failed for value "{ _id: 'sample-animal-id' }" (type Object) at path "_id" for model "animal"`,
-  level: 'error',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 22:33:05'
-}
-{
-  message: `Service -> getAnimal : Erreur lors de la récupération de l'animale : non-existing-animal-id CastError: Cast to ObjectId failed for value "{ _id: 'non-existing-animal-id' }" (type Object) at path "_id" for model "animal"`,
-  level: 'error',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 22:33:05'
-}
-{
-  message: `Controller -> getOneAnimal : Error while fetching a single animal : Error: Erreur lors de la récupération de l'animale : non-existing-animal-id CastError: Cast to ObjectId failed for value "{ _id: 'non-existing-animal-id' }" (type Object) at path "_id" for model "animal"`,
-  level: 'error',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 22:33:05'
-}
-{
-  message: `Service -> getAnimal : Erreur lors de la récupération de l'animale : sample-animal-id CastError: Cast to ObjectId failed for value "{ _id: 'sample-animal-id' }" (type Object) at path "_id" for model "animal"`,
-  level: 'error',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 22:33:05'
-}
-{
-  message: `Controller -> getOneAnimal : Error while fetching a single animal : Error: Erreur lors de la récupération de l'animale : sample-animal-id CastError: Cast to ObjectId failed for value "{ _id: 'sample-animal-id' }" (type Object) at path "_id" for model "animal"`,
-  level: 'error',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 22:33:05'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 22:34:58'
-}
-{
-  message: `Service -> getAnimal : Erreur lors de la récupération de l'animale : sample-animal-id CastError: Cast to ObjectId failed for value "{ _id: 'sample-animal-id' }" (type Object) at path "_id" for model "animal"`,
-  level: 'error',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 22:35:04'
-}
-{
-  message: `Controller -> getOneAnimal : Error while fetching a single animal : Error: Erreur lors de la récupération de l'animale : sample-animal-id CastError: Cast to ObjectId failed for value "{ _id: 'sample-animal-id' }" (type Object) at path "_id" for model "animal"`,
-  level: 'error',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 22:35:04'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 22:48:50'
-}
-{
   message: 'Controller -> getAnimals : Animals fetch',
   level: 'info',
   label: 'Civilisation API',
-  timestamp: '2023-Aug-01 22:49:53'
+  timestamp: '2023-Aug-01 23:24:13'
 }
 {
   message: 'Controller -> getAnimals : Error while fetching animals : Error: Some error occurred',
   level: 'error',
   label: 'Civilisation API',
-  timestamp: '2023-Aug-01 22:49:53'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 22:52:18'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 22:52:42'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 22:54:17'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 22:54:56'
-}
-{
-  message: 'Server is listening on port 3000',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 23:12:59'
-}
-{
-  message: 'Controller -> getAnimals : Animals fetch',
-  level: 'info',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 23:13:05'
-}
-{
-  message: 'Controller -> getAnimals : Error while fetching animals : Error: Some error occurred',
-  level: 'error',
-  label: 'Civilisation API',
-  timestamp: '2023-Aug-01 23:13:05'
+  timestamp: '2023-Aug-01 23:24:13'
 }
 {
   message: 'Controller -> addAnimal : Animals Chien created',
   level: 'info',
   label: 'Civilisation API',
-  timestamp: '2023-Aug-01 23:13:05'
+  timestamp: '2023-Aug-01 23:24:13'
 }
 {
   message: 'Controller -> addAnimal : Error while adding animal. Schema not validate : ValidationError: "age" must be a number',
   level: 'error',
   label: 'Civilisation API',
-  timestamp: '2023-Aug-01 23:13:05'
+  timestamp: '2023-Aug-01 23:24:13'
 }
 {
   message: 'Controller -> addAnimal : Error while adding animal: Error: Some error occurred',
   level: 'error',
   label: 'Civilisation API',
-  timestamp: '2023-Aug-01 23:13:05'
+  timestamp: '2023-Aug-01 23:24:13'
 }
 {
   message: 'Controller -> getOneAnimal : Animal: Chien found',
   level: 'info',
   label: 'Civilisation API',
-  timestamp: '2023-Aug-01 23:13:05'
+  timestamp: '2023-Aug-01 23:24:13'
 }
 {
   message: 'Controller -> getOneAnimal : Animal : some_non_existent_id not found',
   level: 'error',
   label: 'Civilisation API',
-  timestamp: '2023-Aug-01 23:13:05'
+  timestamp: '2023-Aug-01 23:24:13'
 }
 {
   message: 'Controller -> getOneAnimal : Error while fetching a single animal : Error: Some error occurred',
   level: 'error',
   label: 'Civilisation API',
-  timestamp: '2023-Aug-01 23:13:05'
+  timestamp: '2023-Aug-01 23:24:13'
 }
 {
   message: 'Controller -> updateAnimal : Animal: Chien updated',
   level: 'info',
   label: 'Civilisation API',
-  timestamp: '2023-Aug-01 23:13:05'
+  timestamp: '2023-Aug-01 23:24:13'
 }
 {
   message: 'Controller -> updateAnimal : Animal : some_non_existent_id not found',
   level: 'error',
   label: 'Civilisation API',
-  timestamp: '2023-Aug-01 23:13:05'
+  timestamp: '2023-Aug-01 23:24:13'
 }
 {
   message: 'Controller -> updateAnimal : Error while updating animal : Error: Some error occurred',
   level: 'error',
   label: 'Civilisation API',
-  timestamp: '2023-Aug-01 23:13:05'
+  timestamp: '2023-Aug-01 23:24:13'
 }
 {
   message: 'Controller -> deleteAnimal : Animal: Chien deleted',
   level: 'info',
   label: 'Civilisation API',
-  timestamp: '2023-Aug-01 23:13:05'
+  timestamp: '2023-Aug-01 23:24:13'
 }
 {
   message: 'Controller -> deleteAnimal : Animal : some_non_existent_id not found',
   level: 'error',
   label: 'Civilisation API',
-  timestamp: '2023-Aug-01 23:13:06'
+  timestamp: '2023-Aug-01 23:24:13'
 }

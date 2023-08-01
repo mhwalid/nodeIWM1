@@ -11,7 +11,7 @@ Pour le projet nous nous sommes inspirées du pattern MVC (Modèle Vue Controlle
 		|-- logger.ts 		--> Création du logger winston
 	|_ logs/       		--> Fichiers de logs
 	|_ node_modules/    
-	|_ test/       		--> Fichiers de test
+	|_ tests/       		--> Fichiers de test
 	|_ src/
 		|_ /controllers     --> Controllers de l'application
 		|_ /middleware  	--> Middleware pour l'authentification
@@ -95,6 +95,12 @@ npm run dev
 ```
 
 Tester les requêtes via la collection Postman créée : https://github.com/mhwalid/nodeIWM1/blob/main/Postman/Node%20JS%20Civilisation.postman_collection.json
+
+Lancer les test : 
+
+```
+npm run test
+```
 
 ## 5 grands principes REST :
 
