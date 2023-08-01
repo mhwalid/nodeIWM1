@@ -1,0 +1,162 @@
+{
+  message: "Service -> createAnimal : Erreur lors de la création d'un animal :MongooseError: Operation `animals.insertOne()` buffering timed out after 10000ms",
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 21:24:17'
+}
+{
+  message: "Controller -> addAnimal : Error while adding animal: Error: Erreur lors de la création d'un animal :MongooseError: Operation `animals.insertOne()` buffering timed out after 10000ms",
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 21:24:17'
+}
+{
+  message: "Service -> createAnimal : Erreur lors de la création d'un animal :MongooseError: Operation `animals.insertOne()` buffering timed out after 10000ms",
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 21:28:09'
+}
+{
+  message: "Controller -> addAnimal : Error while adding animal: Error: Erreur lors de la création d'un animal :MongooseError: Operation `animals.insertOne()` buffering timed out after 10000ms",
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 21:28:09'
+}
+{
+  message: "Service -> createAnimal : Erreur lors de la création d'un animal :MongooseError: Operation `animals.insertOne()` buffering timed out after 10000ms",
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 21:50:26'
+}
+{
+  message: "Controller -> addAnimal : Error while adding animal: Error: Erreur lors de la création d'un animal :MongooseError: Operation `animals.insertOne()` buffering timed out after 10000ms",
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 21:50:26'
+}
+{
+  message: 'Service -> getAnimals : Erreur lors de la récupération des animaux :MongooseError: Operation `animals.find()` buffering timed out after 10000ms',
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 21:58:41'
+}
+{
+  message: 'Controller -> getAnimals : Error while fetching animals : Error: Erreur lors de la récupération des animaux :MongooseError: Operation `animals.find()` buffering timed out after 10000ms',
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 21:58:41'
+}
+{
+  message: 'Service -> getAnimals : Erreur lors de la récupération des animaux :MongooseError: Operation `animals.find()` buffering timed out after 10000ms',
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 21:58:43'
+}
+{
+  message: 'Controller -> getAnimals : Error while fetching animals : Error: Erreur lors de la récupération des animaux :MongooseError: Operation `animals.find()` buffering timed out after 10000ms',
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 21:58:43'
+}
+{
+  message: `Service -> getAnimal : Erreur lors de la récupération de l'animale : sample-animal-id CastError: Cast to ObjectId failed for value "{ _id: 'sample-animal-id' }" (type Object) at path "_id" for model "animal"`,
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 22:33:05'
+}
+{
+  message: `Controller -> getOneAnimal : Error while fetching a single animal : Error: Erreur lors de la récupération de l'animale : sample-animal-id CastError: Cast to ObjectId failed for value "{ _id: 'sample-animal-id' }" (type Object) at path "_id" for model "animal"`,
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 22:33:05'
+}
+{
+  message: `Service -> getAnimal : Erreur lors de la récupération de l'animale : non-existing-animal-id CastError: Cast to ObjectId failed for value "{ _id: 'non-existing-animal-id' }" (type Object) at path "_id" for model "animal"`,
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 22:33:05'
+}
+{
+  message: `Controller -> getOneAnimal : Error while fetching a single animal : Error: Erreur lors de la récupération de l'animale : non-existing-animal-id CastError: Cast to ObjectId failed for value "{ _id: 'non-existing-animal-id' }" (type Object) at path "_id" for model "animal"`,
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 22:33:05'
+}
+{
+  message: `Service -> getAnimal : Erreur lors de la récupération de l'animale : sample-animal-id CastError: Cast to ObjectId failed for value "{ _id: 'sample-animal-id' }" (type Object) at path "_id" for model "animal"`,
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 22:33:05'
+}
+{
+  message: `Controller -> getOneAnimal : Error while fetching a single animal : Error: Erreur lors de la récupération de l'animale : sample-animal-id CastError: Cast to ObjectId failed for value "{ _id: 'sample-animal-id' }" (type Object) at path "_id" for model "animal"`,
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 22:33:05'
+}
+{
+  message: `Service -> getAnimal : Erreur lors de la récupération de l'animale : sample-animal-id CastError: Cast to ObjectId failed for value "{ _id: 'sample-animal-id' }" (type Object) at path "_id" for model "animal"`,
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 22:35:04'
+}
+{
+  message: `Controller -> getOneAnimal : Error while fetching a single animal : Error: Erreur lors de la récupération de l'animale : sample-animal-id CastError: Cast to ObjectId failed for value "{ _id: 'sample-animal-id' }" (type Object) at path "_id" for model "animal"`,
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 22:35:04'
+}
+{
+  message: 'Controller -> getAnimals : Error while fetching animals : Error: Some error occurred',
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 22:49:53'
+}
+{
+  message: 'Controller -> getAnimals : Error while fetching animals : Error: Some error occurred',
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 23:13:05'
+}
+{
+  message: 'Controller -> addAnimal : Error while adding animal. Schema not validate : ValidationError: "age" must be a number',
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 23:13:05'
+}
+{
+  message: 'Controller -> addAnimal : Error while adding animal: Error: Some error occurred',
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 23:13:05'
+}
+{
+  message: 'Controller -> getOneAnimal : Animal : some_non_existent_id not found',
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 23:13:05'
+}
+{
+  message: 'Controller -> getOneAnimal : Error while fetching a single animal : Error: Some error occurred',
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 23:13:05'
+}
+{
+  message: 'Controller -> updateAnimal : Animal : some_non_existent_id not found',
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 23:13:05'
+}
+{
+  message: 'Controller -> updateAnimal : Error while updating animal : Error: Some error occurred',
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 23:13:05'
+}
+{
+  message: 'Controller -> deleteAnimal : Animal : some_non_existent_id not found',
+  level: 'error',
+  label: 'Civilisation API',
+  timestamp: '2023-Aug-01 23:13:06'
+}
