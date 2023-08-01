@@ -1,5 +1,5 @@
 //importing modules
-import mongoose, {Schema, model,} from 'mongoose'
+import mongoose, {Schema,} from 'mongoose'
 import Joi from 'joi'
 
 //validation schema

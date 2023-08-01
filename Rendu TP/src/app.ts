@@ -1,12 +1,13 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import {db} from "../config/db.config"
+import {logger} from "../config/logger"
 import cookieParser from 'cookie-parser';
 
+// Routers
 const authRouter = require('./routes/auth.routes')
 const humanRouter = require('./routes/human.routes')
 const animalRouter = require('./routes/animal.routes')
-
 
 const app = express()
 
@@ -18,11 +19,11 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 //routes
-app.use("/api/auth", authRouter )
+app.use("/api/auth", authRouter)
 app.use('/api/human', humanRouter)
 app.use('/api/animal', animalRouter)
 
 //db connection then server connection
 db.then(() => {
-    app.listen(process.env.PORT, () => console.log('Server is listening on port 3000'))
+    app.listen(process.env.PORT, () => logger.info('Server is listening on port 3000'))
 })

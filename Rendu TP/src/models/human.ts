@@ -1,6 +1,6 @@
 //importing modules
-import mongoose, {Schema, model,} from 'mongoose'
-import { IAnimals } from "./animal";
+import mongoose, {Schema,} from 'mongoose'
+import {IAnimals} from "./animal";
 import Joi from 'joi'
 
 //validation schema

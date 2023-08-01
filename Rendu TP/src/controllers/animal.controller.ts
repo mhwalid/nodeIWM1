@@ -1,92 +1,92 @@
 //import modules
 import {animalServices} from '../services/animal.service'
-import { Request, Response } from 'express'
-import { AnimalsSchemaValidate } from '../models/animal'
+import {logger} from "../../config/logger"
+import {Request, Response} from 'express'
+import {AnimalsSchemaValidate} from '../models/animal'
 import {humanServices} from "../services/human.service";
 
 class animalController {
-    // Add animal controller
     addAnimal = async (req: Request, res: Response) => {
         try {
-            //data to be saved in database
             const data = {
                 name: req.body.name,
                 age: req.body.age,
                 isDomestic: req.body.isDomestic,
             }
-            //validating the request
+            // Validation de la requete
             const {error, value} = AnimalsSchemaValidate.validate(data)
 
-            if(error){
+            if (error) {
+                logger.error('Controller -> addAnimal : Error while adding animal. Schema not validate : ' + error);
                 return res.status(400).send(error.message);
-            }else{
-                //call the create animal function in the service and pass the data from the request
+            } else {
                 const animal = await animalServices.createAnimal(value)
+                logger.info('Controller -> addAnimal : Animals ' + data.name + ' created');
                 return res.status(201).send(animal)
             }
-        }
-        catch (error) {
-            console.error('Error while adding animal:', error);
+        } catch (error) {
+            logger.error('Controller -> addAnimal : Error while adding animal: ' + error);
             return res.status(500).send('Internal Server Error');
         }
     }
 
-    //get all animals
     getAnimals = async (req: Request, res: Response) => {
         try {
             const animals = await animalServices.getAnimals()
+            logger.info('Controller -> getAnimals : Animals fetch');
             return res.status(200).send(animals)
         } catch (error) {
-            console.error('Error while fetching animals:', error);
+            logger.error('Controller -> getAnimals : Error while fetching animals : ' + error);
             return res.status(500).send('Internal Server Error');
         }
     }
 
-
-    //get a single animal
     getOneAnimal = async (req: Request, res: Response) => {
         try {
             //get id from the parameter
             const id = req.params.id
             const animal = await animalServices.getAnimal(id)
             if (!animal) {
+                logger.error('Controller -> getOneAnimal : Animal : ' + id + ' not found');
                 return res.status(404).send('Animal not found');
             }
+            logger.info('Controller -> getOneAnimal : Animal: ' + animal.name + ' found');
             return res.status(200).json(animal)
         } catch (error) {
-            console.error('Error while fetching a single animal:', error);
+            logger.error('Controller -> getOneAnimal : Error while fetching a single animal : ' + error);
             return res.status(500).send('Internal Server Error');
         }
     }
 
-    //update animal
     updateAnimal = async (req: Request, res: Response) => {
         try {
             const id = req.params.id
             const animal = await animalServices.updateAnimal(id, req.body)
             if (!animal) {
+                logger.error('Controller -> updateAnimal : Animal : ' + id + ' not found');
                 return res.status(404).send('Animal not found');
             }
+            logger.info('Controller -> updateAnimal : Animal: ' + animal.name + ' updated');
             return res.status(200).json(animal)
         } catch (error) {
-            console.error('Error while updating animal:', error);
+            logger.error('Controller -> updateAnimal : Error while updating animal : ' + error);
             return res.status(500).send('Internal Server Error');
         }
     }
 
-
-    // Delete a animal
     deleteAnimal = async (req: Request, res: Response) => {
         try {
             const id = req.params.id;
             const animal = await animalServices.deleteAnimal(id);
             if (!animal) {
+                logger.error('Controller -> deleteAnimal : Animal : ' + id + ' not found');
                 return res.status(404).send('Animal not found');
             }
+            logger.info('Controller -> deleteAnimal : Animal: ' + animal.name + ' deleted');
             return res.status(200).send('Animal deleted');
         } catch (error) {
-            console.error('Error while deleting animal:', error);
-            return res.status(500).send('Internal Server Error');
+            logger.error('Controller -> deleteAnimal : Error while deleting animal : ' + error);
+            return res.status(500).send('Error while deleting animal : ' + error);
         }
     }
 
@@ -94,9 +94,12 @@ class animalController {
         try {
             await humanServices.removeAllAnimalsFromAllHumans();
             await animalServices.setAllAnimalsIsDomesticToFalse();
+
+            logger.info('Controller -> updateAllAnimalsIsDomesticToFalseAndDeleteAssociationWithHuman : Mise à jour réussie : Les animaux sont libérés');
             return res.status(200).send('Mise à jour réussie : Les animaux sont libérés');
         } catch (error) {
-            return res.status(500).send('Erreur lors de la mise à jour des animaux.');
+            logger.error('Controller -> updateAllAnimalsIsDomesticToFalseAndDeleteAssociationWithHuman : Error while updating animal : ' + error);
+            return res.status(500).send('Error while updating animal.');
         }
     }
 }

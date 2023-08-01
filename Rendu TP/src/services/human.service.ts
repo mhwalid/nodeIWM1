@@ -1,6 +1,6 @@
 // Import module
 import {Human, IHumans} from '../models/human'
-import {animalService} from "./animal.service";
+import {logger} from "../../config/logger";
 
 export class humanService {
     // Create a human
@@ -8,7 +8,8 @@ export class humanService {
         try {
             return await Human.create(data)
         } catch (error) {
-            console.log(error);
+            logger.error('Service -> createHuman : Erreur lors de la création d\'un humain :' + error);
+            throw new Error('Erreur lors de la création d\'un humain :' + error);
         }
     }
 
@@ -17,7 +18,8 @@ export class humanService {
         try {
             return await Human.find({}).populate("animals")
         } catch (error) {
-            console.log(error)
+            logger.error('Service -> getHumans : Erreur lors de la récupération des humains :' + error);
+            throw new Error('Erreur lors de la récupération des humains :' + error);
         }
     }
 
@@ -25,14 +27,15 @@ export class humanService {
     async getHuman(id: string) {
 
         try {
-            const human = await Human.findById({_id:id}).populate("animals")
+            const human = await Human.findById({_id: id}).populate("animals")
             if (!human) {
                 return null
             }
             return human
 
         } catch (error) {
-            console.log(error)
+            logger.error('Service -> getHuman : Erreur lors de la récupération de l\'humain : ' + id + ' ' + error);
+            throw new Error('Erreur lors de la récupération de l\'humain : ' + id + ' ' + error);
         }
     }
 
@@ -42,34 +45,36 @@ export class humanService {
             //pass the id of the object you want to update
             //data is for the new body you are updating the old one with
             //new:true, so the dats being returned, is the update one
-            const human = await Human.findByIdAndUpdate({_id:id}, data, {new: true})
-            if(!human){
+            const human = await Human.findByIdAndUpdate({_id: id}, data, {new: true})
+            if (!human) {
                 return null
             }
             return human
         } catch (error) {
-            console.log(error)
+            logger.error('Service -> updateHuman : Erreur lors de la mise à jour de l\'humain : ' + id + ' ' + error);
+            throw new Error('Erreur lors de la mise à jour de l\'humain : ' + id + ' ' + error);
         }
     }
 
     //delete a human by using the find by id and delete
     async deleteHuman(id: string) {
         try {
-            const human = await Human.findById({_id:id})
+            const human = await Human.findById({_id: id})
             if (!human) {
                 return null
             }
-            const humanToDelete = await Human.findByIdAndDelete({_id:id});
+            const humanToDelete = await Human.findByIdAndDelete({_id: id});
             return human;
         } catch (error) {
-            console.log(error)
+            logger.error('Service -> deleteHuman : Erreur lors de la suppresion de l\'humain : ' + id + ' ' + error);
+            throw new Error('Erreur lors de la suppresion de l\'humain : ' + id + ' ' + error);
         }
     }
 
     async getHumansWithHighSalaryAndYoungAge(): Promise<IHumans[]> {
         return Human.find({
-            salary: { $gt: 3000 },
-            age: { $lt: 20 },
+            salary: {$gt: 3000},
+            age: {$lt: 20},
         }).populate('animals');
     }
 
@@ -85,9 +90,9 @@ export class humanService {
                 {
                     $match: {
                         $and: [
-                            { salary: { $lte: 1000 } },
-                            { age: { $gte: 40 } },
-                            { city: "Paris" },
+                            {salary: {$lte: 1000}},
+                            {age: {$gte: 40}},
+                            {city: "Paris"},
                         ],
                     },
                 },
@@ -106,7 +111,7 @@ export class humanService {
                                 input: '$animalDetails',
                                 as: 'animal',
                                 cond: {
-                                    $eq: ['$age', { $divide: ['$age', 2] }],
+                                    $eq: ['$age', {$divide: ['$age', 2]}],
                                 },
                             },
                         },
@@ -116,15 +121,20 @@ export class humanService {
 
             return humans.filter((human) => human.animals.length > 0);
         } catch (error) {
-            throw new Error('Erreur lors de la récupération des humains correspondant aux critères spécifiés.');
+            logger.error('Service -> getHumansMatchingCriteria : Erreur lors de la récupération des humains correspondant aux critères spécifiés : ' + error);
+            throw new Error('Erreur lors de la récupération des humains correspondant aux critères spécifiés : ' + error);
         }
     }
 
+    /**
+     * Supprime tout les animaux de tout les humains
+     */
     async removeAllAnimalsFromAllHumans(): Promise<void> {
         try {
-            await Human.updateMany({}, { $set: { animals: [] } }).exec();
+            await Human.updateMany({}, {$set: {animals: []}}).exec();
         } catch (error) {
-            throw new Error('Erreur lors de la suppression de tous les animaux de tous les humains.');
+            logger.error('Service -> removeAllAnimalsFromAllHumans : Erreur lors de la suppression de tous les animaux de tous les humains : ' + error);
+            throw new Error('Erreur lors de la suppression de tous les animaux de tous les humains : ' + error);
         }
     }
 
