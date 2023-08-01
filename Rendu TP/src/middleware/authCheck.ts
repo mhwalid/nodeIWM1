@@ -3,7 +3,6 @@ import {User} from '../models/user.model'
 import jwt from "jsonwebtoken"
 
 export const checkAuth = async (req: Request, res: Response, next: any) => {
-    console.log(req.cookies.jwt)
     const token = req.cookies.jwt || null
     const secret = process.env.TOKEN_SECRET
     if (token && secret) {
