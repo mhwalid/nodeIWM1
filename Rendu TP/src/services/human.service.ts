@@ -80,9 +80,9 @@ export class humanService {
 
     /**
      * Récupère les humains qui ont des salaires inférieurs à 1000
-     * ET Qui ont plus de 40 ans
-     * ET Qui habite à Paris
-     * ET un animal qui fais exactement 2 fois moins l'age de l'humain
+     * ET qui ont plus de 40 ans
+     * ET qui habitent à Paris
+     * ET un animal qui fait exactement 2 fois moins l'âge de l'humain
      */
     async getHumansMatchingCriteria(): Promise<IHumans[]> {
         try {
@@ -121,13 +121,13 @@ export class humanService {
 
             return humans.filter((human) => human.animals.length > 0);
         } catch (error) {
-            logger.error('Service -> getHumansMatchingCriteria : Erreur lors de la récupération des humains correspondant aux critères spécifiés : ' + error);
-            throw new Error('Erreur lors de la récupération des humains correspondant aux critères spécifiés : ' + error);
+            logger.error('Service -> getHumansMatchingCriteria : Erreur lors de la récupération des humains correspondants aux critères spécifiés : ' + error);
+            throw new Error('Erreur lors de la récupération des humains correspondants aux critères spécifiés : ' + error);
         }
     }
 
     /**
-     * Supprime tout les animaux de tout les humains
+     * Supprime tous les animaux de tous les humains
      */
     async removeAllAnimalsFromAllHumans(): Promise<void> {
         try {

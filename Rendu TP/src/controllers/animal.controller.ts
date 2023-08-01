@@ -13,7 +13,7 @@ class animalController {
                 age: req.body.age,
                 isDomestic: req.body.isDomestic,
             }
-            // Validation de la requete
+            // Validation de la request
             const {error, value} = AnimalsSchemaValidate.validate(data)
 
             if (error) {

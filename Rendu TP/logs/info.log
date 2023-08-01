@@ -5,6 +5,7 @@
   timestamp: '2023-Aug-01 19:36:15'
 }
 {
+<<<<<<< HEAD
   message: "Service -> createAnimal : Erreur lors de la création d'un animal :MongooseError: Operation `animals.insertOne()` buffering timed out after 10000ms",
   level: 'error',
   label: 'Civilisation API',

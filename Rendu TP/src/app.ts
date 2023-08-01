@@ -20,8 +20,8 @@ app.use(express.urlencoded({extended: true}))
 
 //routes
 app.use("/api/auth", authRouter)
-app.use('/api/human', humanRouter)
-app.use('/api/animal', animalRouter)
+app.use('/api/humans', humanRouter)
+app.use('/api/animals', animalRouter)
 
 //db connection then server connection
 db.then(() => {
